@@ -1,0 +1,36 @@
+Release Notes for XADisk 1.2.1.
+
+This document contains the release notes for XADisk 1.2.1 (http://xadisk.java.net/).
+
+Please consult the User Guide, JavaDoc and Example Codes for XADisk 1.2.1 for learning and applying XADisk. The project website
+at http://xadisk.java.net/ contains links to these resources.
+
+If you have any questions, please feel free to write to go.xadisk@java.net.
+
+The following is the list of bugs/enhancements/features which are implemented in this release, after the 1.2 release.
+
+_______________________________________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________________________________
+
+
+XADISK-80 	Document the concurrency control (locking) details for concurrent transactions in XADisk.
+XADISK-93 	Checkpointing done during move and copy operations can be optimized.
+XADISK-94 	Relative path for XADisk System Directory (xaDiskHome) may generate NullPointerException
+XADISK-96 	UNC Paths (\\host\shared-folder\) giving InsufficientPermissionOnFileException for some cases.
+XADISK-97 	DurableDiskSession ignores return value of "forceDirectoryHierarchy" during method "setupDirectorySynchronization".
+XADISK-99 	InsufficientPermissionOnFileException is thrown even for cases when an ancestor directory does not exist.
+XADISK-102 	File system events for directory modifications should also contain the name of the child object.
+XADISK-103 	Maintain lastModified date when performing a move operation
+XADISK-105 	Should document this - "Proxy objects for a remote xadisk instance cannot be shared by multiple threads."
+XADISK-106 	XADiskResourceAdapter violates JCA Spec Section 19.4.2
+XADISK-107 	It takes too long to delete a file from a folder that contains large amount of files
+XADISK-108 	fileExists and fileExistsAndIsDirectory acquire lock over the parent directory, instead of the file/dir itself.
+XADISK-109 	FileIOUtility methods can return earlier when an interrupt is detected.
+XADISK-110 	Lock acquisition methods reset the interrupt flag before returning
+XADISK-111 	Deadlock/Timeout detectors may send interrupt to a thread even outside lock acquisition methods.
+XADISK-112 	In class NativeSession, list of srcFilesCopied will not get cleared for some cases.
+XADISK-113 	During crash recovery, redo of directory creation operation should not delete the existing directory tree.
+XADISK-114 	The paratertype while invoking mep.onMessage remotely, for DirectoryModificationEvent, should be FileSystemStateChangeEvent.
+
+_______________________________________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________________________________
